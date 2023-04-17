@@ -7,25 +7,18 @@
 "use strict"
 
 /**
- * Check service worker.
- */
-if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-Unit3-04/sw.js", {
-    scope: "/ICS2O-Unit3-04/",
-  })
-}
-
-/**
  * This function calculates fahrenheit to celsius.
  */
 function enterClicked() {
   //input
-  const ftemp = parseFloat(document.getElementById("ftemp").value)
+  const fahrenheittemp = parseFloat(
+    document.getElementById("fahrenheittemp").value
+  )
 
   //process
-  const ctemp = (ftemp - 32) * 5 / 9
+  const celsiustemp = ((fahrenheittemp - 32) * 5) / 9
 
   //output
-  document.getElementById("ctemp").innerHTML =
-    "The temperture in celsius is: " + ctemp.toFixed(2) + " °C."
+  document.getElementById("celsiustemp").innerHTML =
+    "The temperture in celsius is: " + celsiustemp.toFixed(2) + " °C."
 }
